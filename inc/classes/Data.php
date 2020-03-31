@@ -51,4 +51,8 @@ class Data {
         // else return false.
         return false;
     }
+
+    public function getCategories() {
+        return $this->categoriesList;
+    }
 }

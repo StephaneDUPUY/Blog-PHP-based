@@ -8,6 +8,8 @@
 
     // Data class allow search datas for a dedicated template, so instantiation
     $dataObject = new Data();
+    // Retrieve categories
+    $categories = $dataObject->getCategories();
 
     // check if a special page is asked.
     if (!empty($_GET['page'])) {

@@ -14,10 +14,10 @@
                     <div class="card">
                         <h3 class="card-header">Catégories</h3>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">TeamBack</li>
-                            <li class="list-group-item">TeamFront</li>
-                            <li class="list-group-item">Collaboration</li>
-                            <li class="list-group-item">Ma Vie De Dev</li>
+                        <!-- dynamic categories display -->
+                        <?php foreach($categories as $categoryId => $category): ?>
+                            <li class="list-group-item"><?= $category ?></li>
+                        <?php endforeach ?>
                         </ul>
                     </div>
                     <!-- Author part -->

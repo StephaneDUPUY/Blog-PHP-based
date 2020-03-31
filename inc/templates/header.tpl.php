@@ -25,18 +25,12 @@
             <!-- part masked in mobile version -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav ">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">TeamBack</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">TeamFront</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Collaboration</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Ma Vie De Dev</a>
-                    </li>
+                    <!-- dynamic categories display -->
+                    <?php foreach($categories as $categoryId => $category): ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><?= $category ?></a>
+                        </li>
+                    <?php endforeach ?>
                 </ul>
             </div>
         </nav>

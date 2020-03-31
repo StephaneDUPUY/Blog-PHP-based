@@ -38,7 +38,7 @@ class Data {
 
     /**
      * Return an Article object from id provided.
-     * 
+     *
      * @param int $id article ID
      * @return Article
      */
@@ -50,6 +50,27 @@ class Data {
         }
         // else return false.
         return false;
+    }
+
+    /**
+     * Return article list for a dedicated category.
+     * 
+     * @param int $categoryId ID form catégory
+     * @return Article[]
+     */
+    public function getArticlesByCategoryId($categoryId) {
+        // set an empty array to be filled by articles from category
+        $articles = [];
+        // for each article
+        foreach ($this->articlesList as $currentId=>$currentArticle) {
+            // if category id match with id passed on setting
+            if ($currentArticle->category == $categoryId) {
+                // so add article in the array
+                $articles[$currentId] = $currentArticle;
+            }
+        }
+        // at the end return the array
+        return $articles;
     }
 
     // Retrieve all categories

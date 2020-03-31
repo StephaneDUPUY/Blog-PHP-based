@@ -35,9 +35,13 @@
     // Category page
     else if ($page == 'category') {
         $templateName = 'category';
+        // retrieve category
         $category = $dataObject->getCategory($_GET['id']);
         if (!$category) {
             $templateName = '404';
+        } else {
+            // retrieve articles by category
+            $articlesList = $dataObject->getArticlesByCategoryId($_GET['id']);
         }
     }
 

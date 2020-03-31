@@ -36,6 +36,9 @@
     else if ($page == 'category') {
         $templateName = 'category';
         $category = $dataObject->getCategory($_GET['id']);
+        if (!$category) {
+            $templateName = '404';
+        }
     }
 
     // Article page.

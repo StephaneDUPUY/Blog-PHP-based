@@ -16,7 +16,10 @@
                         <ul class="list-group list-group-flush">
                         <!-- dynamic categories display -->
                         <?php foreach($categories as $categoryId => $category): ?>
-                            <li class="list-group-item"><?= $category ?></li>
+                            <li class="list-group-item">
+                                <!-- dynamic links -->
+                                <a href="index.php?page=category&id=<?= $categoryId ?>"><?= $category ?></a>
+                            </li>
                         <?php endforeach ?>
                         </ul>
                     </div>
@@ -26,7 +29,10 @@
                         <ul class="list-group list-group-flush">
                             <!-- dynamic authors display -->
                             <?php foreach($authors as $authorId => $author): ?>
-                                <li class="list-group-item"><?= $author ?></a></li>
+                                <li class="list-group-item">
+                                    <!-- dynamic links -->
+                                    <a href="index.php?page=author&id=<?= $authorId ?>"><?= $author ?></a>
+                                </li>
                             <?php endforeach ?>
                         </ul>
                     </div>

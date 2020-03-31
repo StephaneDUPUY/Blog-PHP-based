@@ -28,7 +28,8 @@
                     <!-- dynamic categories display -->
                     <?php foreach($categories as $categoryId => $category): ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><?= $category ?></a>
+                            <!-- dynamic links -->
+                            <a class="nav-link" href="index.php?page=category&id=<?= $categoryId ?>"><?= $category ?></a>
                         </li>
                     <?php endforeach ?>
                 </ul>

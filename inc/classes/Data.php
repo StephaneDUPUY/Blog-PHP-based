@@ -52,12 +52,21 @@ class Data {
         return false;
     }
 
-    // Retrieve categories
+    // Retrieve all categories
     public function getCategories() {
         return $this->categoriesList;
     }
 
-    // Retrieve authors
+    // Retrieve one category $id based
+    public function getCategory($id) {
+        // check existence
+        if (array_key_exists($id, $this->categoriesList)) {
+            return $this->categoriesList[$id];
+        }
+        return false;
+    }
+
+    // Retrieve all authors
     public function getAuthors() {
         return $this->authorsList;
     }

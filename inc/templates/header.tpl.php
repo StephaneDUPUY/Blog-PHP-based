@@ -26,10 +26,10 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav ">
                     <!-- dynamic categories display -->
-                    <?php foreach($categories as $categoryId => $category): ?>
+                    <?php foreach($categories as $categoryId => $categoryObj): ?>
                         <li class="nav-item">
                             <!-- dynamic links with name -->
-                            <a class="nav-link" href="index.php?page=category&id=<?= $categoryId ?>"><?= $category->name ?></a>
+                            <a class="nav-link" href="index.php?page=category&id=<?= $categoryId ?>"><?= $categoryObj->name ?></a>
                         </li>
                     <?php endforeach ?>
                 </ul>

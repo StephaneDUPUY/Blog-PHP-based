@@ -35,6 +35,7 @@
     // Category page
     else if ($page == 'category') {
         $templateName = 'category';
+        $category = $dataObject->getCategory($_GET['id']);
     }
 
     // Article page.

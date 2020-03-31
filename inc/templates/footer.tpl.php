@@ -15,10 +15,10 @@
                         <h3 class="card-header">Catégories</h3>
                         <ul class="list-group list-group-flush">
                         <!-- dynamic categories display -->
-                        <?php foreach($categories as $categoryId => $category): ?>
+                        <?php foreach($categories as $categoryId => $categoryObj): ?>
                             <li class="list-group-item">
                                 <!-- dynamic links with name -->
-                                <a href="index.php?page=category&id=<?= $categoryId ?>"><?= $category->name ?></a>
+                                <a href="index.php?page=category&id=<?= $categoryId ?>"><?= $categoryObj->name ?></a>
                             </li>
                         <?php endforeach ?>
                         </ul>

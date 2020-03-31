@@ -73,6 +73,23 @@ class Data {
         return $articles;
     }
 
+    /**
+     * Return article list for a dedicated author.
+     *
+     * @param int $authorId ID from author
+     * @return Article[]
+     */
+    public function getArticlesByAuthorId($authorId) {
+        $articles = [];
+        foreach ($this->articlesList as $currentId=>$currentArticle) {
+            // if authir id match with id passed on setting
+            if ($currentArticle->author == $authorId) {
+                $articles[$currentId] = $currentArticle;
+            }
+        }
+        return $articles;
+    }
+
     // Retrieve all categories
     public function getCategories() {
         return $this->categoriesList;
@@ -90,5 +107,13 @@ class Data {
     // Retrieve all authors
     public function getAuthors() {
         return $this->authorsList;
+    }
+
+    // Retrieve one auhtor $id based
+    public function getAuthor($id) {
+        if (array_key_exists($id, $this->authorsList)) {
+            return $this->authorsList[$id];
+        }
+        return false;
     }
 }

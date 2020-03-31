@@ -30,6 +30,14 @@
     // Author page.
     if ($page == 'author') {
         $templateName = 'author';
+        // retrieve author
+        $author = $dataObject->getAuthor($_GET['id']);
+        if (!$author) {
+            $templateName = '404';
+        } else {
+            // retrieve articles by author
+            $articlesList = $dataObject->getArticlesByAuthorId($_GET['id']);
+        }
     }
 
     // Category page

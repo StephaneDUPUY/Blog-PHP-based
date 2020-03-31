@@ -1,5 +1,11 @@
-<h1>Auteur</h1>
+<h1><?= $author->name ?></h1>
 
-<p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, culpa in esse ullam, totam magnam at accusamus tempora ut dolorem veritatis quae, hic nesciunt necessitatibus! Quos, molestias aliquid. Deleniti, provident.
-</p>
+<?php foreach ($articlesList as $currentId => $currentArticle) : ?>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <a href="index.php?page=article&id=<?= $currentId ?>"><?= $currentArticle->title ?></a>
+            <span class="badge badge-light badge-pill"><?= $currentArticle->author ?></span>
+            <span class="badge badge-secondary badge-pill"><?= $currentArticle->getDateFr() ?></span>
+        </li>
+    </ul>
+<?php endforeach ?>

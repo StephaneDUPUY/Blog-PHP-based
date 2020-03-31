@@ -5,6 +5,8 @@
     // Classes included
     require 'inc/classes/Article.php';
     require 'inc/classes/Data.php';
+    require 'inc/classes/Category.php';
+    require 'inc/classes/Author.php';
 
     // Data class allow search datas for a dedicated template, so instantiation
     $dataObject = new Data();
@@ -12,8 +14,8 @@
     $categories = $dataObject->getCategories();
     // Retrieve authors
     $authors = $dataObject->getAuthors();
+
     // check if a special page is asked.
-    
     if (!empty($_GET['page'])) {
         $page = trim($_GET['page']);
     }

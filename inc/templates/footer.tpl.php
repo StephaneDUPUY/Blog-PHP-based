@@ -17,8 +17,8 @@
                         <!-- dynamic categories display -->
                         <?php foreach($categories as $categoryId => $category): ?>
                             <li class="list-group-item">
-                                <!-- dynamic links -->
-                                <a href="index.php?page=category&id=<?= $categoryId ?>"><?= $category ?></a>
+                                <!-- dynamic links with name -->
+                                <a href="index.php?page=category&id=<?= $categoryId ?>"><?= $category->name ?></a>
                             </li>
                         <?php endforeach ?>
                         </ul>
@@ -30,8 +30,8 @@
                             <!-- dynamic authors display -->
                             <?php foreach($authors as $authorId => $author): ?>
                                 <li class="list-group-item">
-                                    <!-- dynamic links -->
-                                    <a href="index.php?page=author&id=<?= $authorId ?>"><?= $author ?></a>
+                                    <!-- dynamic links with name -->
+                                    <a href="index.php?page=author&id=<?= $authorId ?>"><?= $author->name ?></a>
                                 </li>
                             <?php endforeach ?>
                         </ul>

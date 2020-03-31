@@ -6,7 +6,7 @@
     require 'inc/classes/Article.php';
     require 'inc/classes/Data.php';
 
-    // Data class provide datas, instantiation
+    // Data class allow search datas for a dedicated template, so instantiation
     $dataObject = new Data();
 
     // check if a special page is asked.

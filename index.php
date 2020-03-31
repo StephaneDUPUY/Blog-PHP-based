@@ -10,8 +10,10 @@
     $dataObject = new Data();
     // Retrieve categories
     $categories = $dataObject->getCategories();
-
+    // Retrieve authors
+    $authors = $dataObject->getAuthors();
     // check if a special page is asked.
+    
     if (!empty($_GET['page'])) {
         $page = trim($_GET['page']);
     }
@@ -20,7 +22,7 @@
         $page = 'home';
     }
 
-    // Initialisation of  variable copntening nma of central template correspondig page asked
+    // Initialisation of  variable coptening name of central template corresponding page asked
     $templateName = '';
 
     // Author page.

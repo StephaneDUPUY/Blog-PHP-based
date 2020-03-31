@@ -52,7 +52,13 @@ class Data {
         return false;
     }
 
+    // Retrieve categories
     public function getCategories() {
         return $this->categoriesList;
+    }
+
+    // Retrieve authors
+    public function getAuthors() {
+        return $this->authorsList;
     }
 }

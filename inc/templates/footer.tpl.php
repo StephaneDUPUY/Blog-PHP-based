@@ -24,13 +24,10 @@
                     <div class="card">
                         <h3 class="card-header">Auteurs</h3>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Stéphane</li>
-                            <li class="list-group-item">Franck</li>
-                            <li class="list-group-item">Anne</li>
-                            <li class="list-group-item">Jules</li>
-                            <li class="list-group-item">Emilie</li>
-                            <li class="list-group-item">Anaïs</li>
-                            <li class="list-group-item">Richard</li>
+                            <!-- dynamic authors display -->
+                            <?php foreach($authors as $authorId => $author): ?>
+                                <li class="list-group-item"><?= $author ?></a></li>
+                            <?php endforeach ?>
                         </ul>
                     </div>
                 </aside>

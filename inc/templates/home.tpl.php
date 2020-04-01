@@ -2,10 +2,10 @@
 <?php foreach($articlesList as $currentId => $currentArticle): ?>
   <article class="card">
     <div class="card-body">
-      <h2 class="card-title"><a href="#"><?= $currentArticle->title ?></a>Title</h2>
+      <h2 class="card-title"><a href="index.php?page=article&id=<?= $currentId ?>"><?= $currentArticle->title ?></a></h2>
       <p class="card-text"><?= $currentArticle->content ?></p>
       <p class="infos">
-          Posté par <a href="#" class="card-link"><?= $currentArticle->author ?></a> le <time><?= $currentArticle->getDateFr() ?></time> dans <a href="#" class="card-link"><?= $currentArticle->category ?></a>
+        Posté par <a href="index.php?page=author&id=<?= $currentArticle->author ?>" class="card-link"><?= $authors[$currentArticle->author]->name ?></a> le <time><?= $currentArticle->getDateFr() ?></time> dans <a href="index.php?page=category&id=<?= $currentArticle->category ?>" class="card-link"><?= $categories[$currentArticle->category]->name ?></a>
       </p>
     </div>
   </article>

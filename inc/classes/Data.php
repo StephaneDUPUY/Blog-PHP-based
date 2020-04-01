@@ -54,7 +54,7 @@ class Data {
 
     /**
      * Return article list for a dedicated category.
-     * 
+     *
      * @param int $categoryId ID form catégory
      * @return Article[]
      */

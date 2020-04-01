@@ -7,20 +7,20 @@
                         <input type="text" class="form-control" placeholder="Rechercher un article..."
                         aria-label="Rechercher un article..." aria-describedby="basic-addon2">
                         <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button">Allez</button>
+                            <button class="btn btn-outline-secondary" type="button">Allez</button>
                         </div>
                     </div>
                     <!-- Catégory part -->
                     <div class="card">
                         <h3 class="card-header">Catégories</h3>
                         <ul class="list-group list-group-flush">
-                        <!-- dynamic categories display -->
-                        <?php foreach($categories as $categoryId => $categoryObj): ?>
-                            <li class="list-group-item">
-                                <!-- dynamic links with name -->
-                                <a href="index.php?page=category&id=<?= $categoryId ?>"><?= $categoryObj->name ?></a>
-                            </li>
-                        <?php endforeach ?>
+                            <!-- dynamic categories display -->
+                            <?php foreach($categories as $categoryId => $categoryObj): ?>
+                                <li class="list-group-item">
+                                    <!-- dynamic links with name -->
+                                    <a href="index.php?page=category&id=<?= $categoryId ?>"><?= $categoryObj->name ?></a>
+                                </li>
+                            <?php endforeach ?>
                         </ul>
                     </div>
                     <!-- Author part -->
@@ -68,4 +68,4 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     </body>
 
-</html> 
+</html>

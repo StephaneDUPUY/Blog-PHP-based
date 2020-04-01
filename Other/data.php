@@ -44,11 +44,11 @@ $dataCategoriesList = [
 // Authors
 $dataAuthorsList = [
     // ID => object Author
-    1 => new Author('Maxime'),
-    2 => new Author('Anthony'),
-    3 => new Author('Alexandre'),
-    4 => new Author('Dario'),
-    5 => new Author('Julie'),
-    6 => new Author('Lucie'),
-    7 => new Author('Xavier')
+    1 => new Author('Stéphane'),
+    2 => new Author('Emilie'),
+    3 => new Author('Jules'),
+    4 => new Author('Anaïs'),
+    5 => new Author('Franck'),
+    6 => new Author('Anne'),
+    7 => new Author('Richard')
 ];
